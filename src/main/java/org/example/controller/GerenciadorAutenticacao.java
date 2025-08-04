@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import org.example.model.Cliente;
 import org.example.util.CSVUtil;
 
 import java.io.IOException;
@@ -9,7 +10,7 @@ public class GerenciadorAutenticacao {
     private CSVUtil csv;
 
     public GerenciadorAutenticacao() {
-        this.csv = new CSVUtil("clientes.csv");
+        this.csv = new CSVUtil();
     }
 
     public Long gerarProximoId() throws IOException {

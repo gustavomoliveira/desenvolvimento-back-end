@@ -12,8 +12,27 @@ import java.util.stream.Collectors;
 public class CSVUtil {
     private final Path caminhoCSV;
 
-    public CSVUtil(String arquivo) {
-        this.caminhoCSV = Paths.get("src/main/resources/data/" + arquivo);
+    public CSVUtil() {
+        this.caminhoCSV = Paths.get("src/main/resources/data/clientes.csv");
+
+        try {
+            iniciarArquivoCSV();
+        } catch (IOException e) {
+            System.out.println("ERRO: Não foi possível iniciar o arquivo CSV: " + e.getMessage());;
+        }
+    }
+
+    public void iniciarArquivoCSV() throws IOException {
+        if (!Files.exists(this.caminhoCSV)) {
+
+            Files.createDirectories(this.caminhoCSV.getParent());
+
+            Files.createFile(this.caminhoCSV);
+
+            System.out.println("Arquivo 'clientes.csv' criado em: " + this.caminhoCSV);
+        } else {
+            System.out.println("Arquivo clientes.csv localizado!");
+        }
     }
 
     public List<String[]> lerCSV() throws IOException {

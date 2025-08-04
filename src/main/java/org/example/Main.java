@@ -1,18 +1,13 @@
 package org.example;
 
-import org.example.util.CSVUtil;
+import org.example.view.MenuView;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        CSVUtil csvUtil = new CSVUtil("clientes.csv");
+        MenuView executarMenu = new MenuView();
 
-        List<String[]> dados = Arrays.asList(
-                new String[]{"1,gustavo,gustavo@email.com,senhaSenha23,123344556,Rua teste"},
-                new String[]{"2", "maria", "maria@email.com", "outraSenha", "987654321", "Rua exemplo"}
-        );
+        executarMenu.exibirMenuPrincipal();
     }
 }

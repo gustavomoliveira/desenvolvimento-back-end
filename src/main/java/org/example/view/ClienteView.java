@@ -1,14 +1,15 @@
 package org.example.view;
 
 import org.example.controller.GerenciadorAutenticacao;
+import org.example.model.Cliente;
 
 import java.util.Scanner;
 
 public class ClienteView {
     private GerenciadorAutenticacao gerenciadorAut;
 
-    public ClienteView() {
-        this.gerenciadorAut = new GerenciadorAutenticacao();
+    public ClienteView(GerenciadorAutenticacao gerenciadorAut) {
+        this.gerenciadorAut = gerenciadorAut;
     }
 
     public String capturarEmailComValidacao() {
@@ -113,7 +114,7 @@ public class ClienteView {
     }
 
     public String[] capturarDadosCompletosParaCadastro() {
-        System.out.println("=== CADASTRO DE NOVO CLIENTE ===");
+        System.out.println("==== CADASTRO DE NOVO CLIENTE ====");
         String nome = capturarNomeComValidacao();
         String email = capturarEmailComValidacao();
         String senha = capturarSenhaComValidacao();
