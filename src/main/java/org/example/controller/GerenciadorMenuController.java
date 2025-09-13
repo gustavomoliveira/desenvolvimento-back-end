@@ -4,12 +4,12 @@ import org.example.view.ClienteView;
 
 import java.util.Scanner;
 
-public class GerenciadorMenu {
-    private GerenciadorAutenticacao gerenciadorAut;
+public class GerenciadorMenuController {
+    private GerenciadorAutenticacaoController gerenciadorAut;
     private ClienteView clienteView;
 
-    public GerenciadorMenu() {
-        this.gerenciadorAut = new GerenciadorAutenticacao();
+    public GerenciadorMenuController() {
+        this.gerenciadorAut = new GerenciadorAutenticacaoController();
         this.clienteView = new ClienteView(this.gerenciadorAut);
     }
 
@@ -17,7 +17,7 @@ public class GerenciadorMenu {
         return clienteView;
     }
 
-    public GerenciadorAutenticacao getGerenciadorAut() {
+    public GerenciadorAutenticacaoController getGerenciadorAut() {
         return gerenciadorAut;
     }
 

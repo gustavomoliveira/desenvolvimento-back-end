@@ -1,15 +1,15 @@
 package org.example.view;
 
-import org.example.controller.GerenciadorMenu;
+import org.example.controller.GerenciadorMenuController;
 import org.example.model.Cliente;
 
 import java.io.IOException;
 
 public class MenuView {
-    private GerenciadorMenu gerenciadorMenu;
+    private GerenciadorMenuController gerenciadorMenu;
 
     public MenuView() {
-        this.gerenciadorMenu = new GerenciadorMenu();
+        this.gerenciadorMenu = new GerenciadorMenuController();
     }
 
     public void exibirMenuPrincipal() {
@@ -63,7 +63,7 @@ public class MenuView {
                 gerenciadorMenu.getClienteView().exibirMensagemLoginFalhou();
             }
         } catch (IOException e) {
-            System.out.println("ERRO: Nnao foi possível acessar os dados: " + e.getMessage());
+            System.out.println("ERRO: Não foi possível acessar os dados: " + e.getMessage());
         }
     }
 

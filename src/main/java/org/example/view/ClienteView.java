@@ -1,14 +1,14 @@
 package org.example.view;
 
-import org.example.controller.GerenciadorAutenticacao;
+import org.example.controller.GerenciadorAutenticacaoController;
 import org.example.model.Cliente;
 
 import java.util.Scanner;
 
 public class ClienteView {
-    private GerenciadorAutenticacao gerenciadorAut;
+    private GerenciadorAutenticacaoController gerenciadorAut;
 
-    public ClienteView(GerenciadorAutenticacao gerenciadorAut) {
+    public ClienteView(GerenciadorAutenticacaoController gerenciadorAut) {
         this.gerenciadorAut = gerenciadorAut;
     }
 
@@ -104,12 +104,6 @@ public class ClienteView {
     public void exibirMensagemCadastroFalhou(String motivo) {
         System.out.println("ERRO: Falha no cadastro: " + motivo);
         System.out.println("Tente novamente.");
-        System.out.println();
-    }
-
-    public void exibirMensagemEmailJaExiste() {
-        System.out.println("ERRO: Este email já está cadastrado!");
-        System.out.println("Tente fazer login ou use outro email.");
         System.out.println();
     }
 

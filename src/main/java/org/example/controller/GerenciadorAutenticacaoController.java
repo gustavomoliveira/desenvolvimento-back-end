@@ -6,10 +6,10 @@ import org.example.util.CSVUtil;
 import java.io.IOException;
 import java.util.List;
 
-public class GerenciadorAutenticacao {
+public class GerenciadorAutenticacaoController {
     private CSVUtil csv;
 
-    public GerenciadorAutenticacao() {
+    public GerenciadorAutenticacaoController() {
         this.csv = new CSVUtil();
     }
 
