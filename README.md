@@ -40,7 +40,7 @@ mvn compile exec:java -Dexec.mainClass="org.example.Main"
 Execute o backend
 Execute o CLI
 Teste cadastro de novo usuário
-Teste login with credenciais válidas
+Teste login com credenciais válidas
 Teste login com credenciais inválidas
 
 📝 Requisitos
